@@ -562,11 +562,12 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Work ----- */
 /* --------------------------------------- */
 
-.JS-kategorie{
+.JS-kategorie, .react-kategorie{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 200px;
+    gap: 3.5em;
 }
 
 .JS-kategorie img {

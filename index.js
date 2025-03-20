@@ -13,18 +13,33 @@ const handleFirstTab = (e) => {
 }
 
 
-const mobileMenu = document.getElementById("mobile-menu"); // 🆕 Hamburger Menü Button
-const navItems = document.querySelector(".nav__items"); // 🆕 Navigation Liste
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = document.getElementById("mobile-menu");
+  const navItems = document.querySelector(".nav__items");
 
-const toggleMenu = () => {
-  navItems.classList.toggle("active"); // 🆕 Menü öffnen/schließen
-};
+  const toggleMenu = (event) => {
+      event.preventDefault(); // Verhindert unerwünschte Doppelklick-Effekte auf Mobile
+      navItems.classList.toggle("active");
+      document.body.classList.toggle("menu-open"); // Sperrt den Hintergrund, wenn Menü offen ist
+  };
 
-mobileMenu.addEventListener("click", toggleMenu);
-mobileMenu.addEventListener("touchstart", (e) => {
-    e.preventDefault(); // 🆕 Verhindert unerwünschte Doppelklick-Effekte
-    toggleMenu();
+  // Event-Listener für Click und Touch
+  mobileMenu.addEventListener("click", toggleMenu);
+  mobileMenu.addEventListener("touchend", toggleMenu, { passive: false });
+
+  // Falls ein Link im Menü angeklickt wird, soll sich das Menü schließen
+  document.querySelectorAll(".nav__items a").forEach(link => {
+      link.addEventListener("click", () => {
+          navItems.classList.remove("active");
+          document.body.classList.remove("menu-open");
+      });
+  });
 });
+
+
+
+
+
 
 const handleMouseDownOnce = () => {
   document.body.classList.remove('user-is-tabbing')

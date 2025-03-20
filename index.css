@@ -472,22 +472,22 @@ body:not(.user-is-tabbing) a:focus {
     }
 
     .nav__items { /* 🆕 Navigation ausblenden für Mobil */
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 190px;
-        left: 0;
-        width: 100%;
-        background: black;
-        text-align: center;
-        padding: 10px 0;
-        z-index: 100;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .nav__items.active { /* 🆕 Sichtbar wenn aktiv */
-        display: flex !important ;
-    }
+        .nav__items {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: black;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+    
+        .nav__items.active {
+            display: flex !important; /* Falls das Menü nicht erscheint */
+        }
 
     .nav__link { /* 🆕 Größe angepasst für Touch */
         padding: 10px;
@@ -547,7 +547,7 @@ body:not(.user-is-tabbing) a:focus {
     }
 
     .dropdown-menu li a:hover {
-        background-color: #ff3258;
+        color: gold;
     }
 }
 

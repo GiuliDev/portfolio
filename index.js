@@ -18,14 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const navItems = document.querySelector(".nav__items");
 
   const toggleMenu = (event) => {
-      event.preventDefault(); // Verhindert unerwünschte Doppelklick-Effekte auf Mobile
+      event.preventDefault(); // Verhindert unerwünschtes Doppeltippen auf Mobile
       navItems.classList.toggle("active");
-      document.body.classList.toggle("menu-open"); // Sperrt den Hintergrund, wenn Menü offen ist
+      document.body.classList.toggle("menu-open"); // Hintergrund fixieren, wenn Menü offen ist
+      console.log("Menu Status:", navItems.classList.contains("active")); // Debug-Log für Prüfung
   };
 
-  // Event-Listener für Click und Touch
+  // Unterstützt sowohl Click als auch Touch
   mobileMenu.addEventListener("click", toggleMenu);
-  mobileMenu.addEventListener("touchend", toggleMenu, { passive: false });
+  mobileMenu.addEventListener("touchstart", toggleMenu, { passive: false });
 
   // Falls ein Link im Menü angeklickt wird, soll sich das Menü schließen
   document.querySelectorAll(".nav__items a").forEach(link => {
@@ -35,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
-
 
 
 

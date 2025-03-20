@@ -472,22 +472,25 @@ body:not(.user-is-tabbing) a:focus {
         
     }
 
-    .nav__items { /* 🆕 Navigation ausblenden für Mobil */
-        display: none;
-        flex-direction: column;
+    .nav__items {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
         position: absolute;
-        top: 240px;
+        top: 80px;
         left: 0;
         width: 100%;
         background: black;
         text-align: center;
         padding: 10px 0;
         z-index: 100;
-        transition: all 0.9s ease-in-out;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
 
-    .nav__items.active { /* 🆕 Sichtbar wenn aktiv */
-        display: flex !important ;
+    .nav__items.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .nav__link { /* 🆕 Größe angepasst für Touch */
@@ -519,7 +522,7 @@ body:not(.user-is-tabbing) a:focus {
     .dropdown-menu {
         display: none;
         position: fixed; /* ⚠️ FIX: Setzt das Menü über alle anderen Inhalte */
-        top: 95px; /* Stellt sicher, dass es direkt unter der Navbar beginnt */
+        top: 75px; /* Stellt sicher, dass es direkt unter der Navbar beginnt */
         left: 0;
         width: 100%;
         background: black;
@@ -549,7 +552,7 @@ body:not(.user-is-tabbing) a:focus {
 
     .dropdown-menu li a:hover {
         color: gold;
-        
+
     }
 }
 
@@ -663,7 +666,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .JS-kategorie img {
-    width: 250px;
+    width: 200px;
+}
+
+.react-kategorie img {
+    width: 100px;
 }
 
 .work__box {

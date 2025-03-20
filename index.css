@@ -364,16 +364,16 @@ body:not(.user-is-tabbing) a:focus {
   .dropdown-menu {
     display: none;
     position: absolute;
+    top: 100%; /* Direkt unter "Projects" */
+    left: 0;
+    width: 200px; /* Breite anpassen falls nötig */
     background-color: black;
     list-style: none;
     padding: 10px 0;
-    min-width: 150px;
-    top: 100%;
-    left: 0;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
+    z-index: 999; /* Sicherstellen, dass es über anderen Elementen liegt */
+}
 
   .dropdown-menu li {
     padding: 10px;
@@ -446,11 +446,12 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__items {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px; /* Abstand zwischen den Links */
+    gap: 50px;
     list-style: none;
 }
 
@@ -473,6 +474,7 @@ body:not(.user-is-tabbing) a:focus {
     }
 
     .nav__items {
+        flex-direction: column;
         visibility: hidden;
         opacity: 0;
         transform: translateY(-10px);
@@ -516,22 +518,20 @@ body:not(.user-is-tabbing) a:focus {
     }
 
     .dropdown {
-        position: relative; /* Stellt sicher, dass das Menü relativ zum Parent bleibt */
+        position: relative;
+        width: 100%;
     }
 
     .dropdown-menu {
         display: none;
-        position: fixed; /* ⚠️ FIX: Setzt das Menü über alle anderen Inhalte */
-        top: 75px; /* Stellt sicher, dass es direkt unter der Navbar beginnt */
-        left: 0;
+        position: relative; /* Verhindert Überlappung */
+        top: 0; /* Direkt unter Projects */
         width: 100%;
         background: black;
-        list-style: none;
-        padding: 0px 0;
-        border-radius: 0;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
-        z-index: 1000; /* Stellt sicher, dass es über allem liegt */
+        padding: 10px 0;
+        border-radius: 5px;
+        z-index: 99; /* Hält das Menü hinter About */
     }
 
     .dropdown:hover .dropdown-menu,
@@ -540,7 +540,8 @@ body:not(.user-is-tabbing) a:focus {
     }
 
     .dropdown-menu li {
-        padding: 12px;
+        text-align: center;
+        padding: 10px;
     }
 
     .dropdown-menu li a {
@@ -554,6 +555,8 @@ body:not(.user-is-tabbing) a:focus {
         color: gold;
 
     }
+
+    
 }
 
 @media(max-width: 500px) {

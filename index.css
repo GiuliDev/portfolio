@@ -335,19 +335,126 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Navigation ----- */
 /* --------------------------------------- */
 
-.nav {
+
+.menu-toggle { /* 🆕 NEU HINZUGEFÜGT */
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 1.5em;
+}
+
+.menu-toggle .bar { /* 🆕 NEU HINZUGEFÜGT */
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+}
+
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background: black;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.navContainer{
+    margin: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sozial-media {
+    display: flex; /* Richtet die Icons in einer Linie aus */
+    gap: 10px; /* Fügt Abstand zwischen den Icons hinzu */
+    align-items: center;
+}
+
+.sozial-media a {
+    text-decoration: none; /* Entfernt Unterstriche */
+}
+
+
+.nav__link {
+    text-shadow: 0px 0px 3px  white;
+    transition: color 0.3s;
+}
+
+.nav__link.active {
+    color: gold; /* Highlight für aktiven Bereich */
+    
+}
+
+.nav__link[data-section="home"].active {
+    color: white; /* Hero-Bereich sollte nicht hervorgehoben sein */
+    font-weight: normal;
+    
+}
+
+.nav {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: space-around;
     padding: var(--gutter-normal) 0;
 }
 
 .nav__items {
-    display: flex;
-    list-style: none;
+    display: none; /* Standardmäßig versteckt */
+    flex-direction: column;
+    align-items: center; /* Stellt sicher, dass alles zentriert ist */
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav__item {
+    width: 100%; /* Gleiche Breite für alle */
+    text-align: center; /* Zentriert den Text */
+    padding: 10px 0; /* Gleichmäßiges Padding */
 }
 
 .nav__item:not(:last-child) {
-    margin-right: var(--gutter-medium);
+    margin-right: 0;
+}
+
+
+/* RESPONSIVE DESIGN für kleine Bildschirme */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* 🆕 Hamburger-Menü sichtbar */
+    }
+
+    .nav__items { /* 🆕 Navigation ausblenden für Mobil */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: black;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav__items.active { /* 🆕 Sichtbar wenn aktiv */
+        display: flex;
+    }
+
+    .nav__link { /* 🆕 Größe angepasst für Touch */
+        padding: 10px;
+        width: 100%;
+        display: block;
+        
+    }
 }
 
 @media(max-width: 500px) {
@@ -429,9 +536,7 @@ body:not(.user-is-tabbing) a:focus {
 .beschreibung-kurz {
     text-shadow: 0px 0px 20px  black;
 }
-.nav__link {
-    text-shadow: 0px 0px 3px  white;
-}
+
 
 .title-developer-span {
     color: #ff3258;
@@ -453,10 +558,23 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Work ----- */
 /* --------------------------------------- */
 
+.JS-kategorie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.JS-kategorie img {
+    width: 250px;
+}
+
 .work__box {
     display: flex;
     align-items: center;
 }
+
+
 
 @media(max-width: 900px) {
     .work__box {

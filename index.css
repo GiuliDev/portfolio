@@ -357,6 +357,40 @@ body:not(.user-is-tabbing) a:focus {
     background: gold; /* Dunkleres Rot, wenn man mit der Maus darüber fährt */
 }
 
+.dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-menu li {
+    padding: 10px;
+  }
+
+  .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-menu li a:hover {
+    
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
 .sticky-nav {
     position: fixed;

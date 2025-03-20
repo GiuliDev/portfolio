@@ -72,7 +72,13 @@
         </div>
 
         <ul class="nav__items">
-          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item dropdown">
+            <a href="#projects" class="nav__link">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="#react-projects" class="nav__link">React</a></li>
+              <li><a href="#javascript-projects" class="nav__link">JavaScript</a></li>
+            </ul>
+          </li>
           <!-- <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li> -->
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
@@ -111,7 +117,7 @@
       <div class="row">
         <h2>My Projects</h2>
 
-        <div class="react-kategorie">
+        <div class="react-kategorie" id="react-projects">
           <img src="./images/React Logo.png" width="130px" alt="React Logo">
           <h3>React</h3>
         </div>
@@ -147,7 +153,7 @@
 
 
 
-        <div class="JS-kategorie">
+        <div class="JS-kategorie" id="javascript-projects">
           <img src="./images/All in one Logo.png" alt="HTML & CSS & JavaScript Logo">
           <h3>HTML | CSS | JavaScript</h3>
         </div>

@@ -474,18 +474,19 @@ body:not(.user-is-tabbing) a:focus {
     .nav__items { /* 🆕 Navigation ausblenden für Mobil */
         display: none;
         flex-direction: column;
-        width: 100%;
         position: absolute;
         top: 60px;
         left: 0;
+        width: 100%;
         background: black;
         text-align: center;
         padding: 10px 0;
         z-index: 100;
+        transition: all 0.3s ease-in-out;
     }
 
     .nav__items.active { /* 🆕 Sichtbar wenn aktiv */
-        display: flex;
+        display: flex !important ;
     }
 
     .nav__link { /* 🆕 Größe angepasst für Touch */

@@ -16,8 +16,14 @@ const handleFirstTab = (e) => {
 const mobileMenu = document.getElementById("mobile-menu"); // 🆕 Hamburger Menü Button
 const navItems = document.querySelector(".nav__items"); // 🆕 Navigation Liste
 
-mobileMenu.addEventListener("click", () => { // 🆕 Event-Listener für Klick
-    navItems.classList.toggle("active"); // 🆕 Menü öffnen/schließen
+const toggleMenu = () => {
+  navItems.classList.toggle("active"); // 🆕 Menü öffnen/schließen
+};
+
+mobileMenu.addEventListener("click", toggleMenu);
+mobileMenu.addEventListener("touchstart", (e) => {
+    e.preventDefault(); // 🆕 Verhindert unerwünschte Doppelklick-Effekte
+    toggleMenu();
 });
 
 const handleMouseDownOnce = () => {

@@ -475,7 +475,7 @@ body:not(.user-is-tabbing) a:focus {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 190px;
         left: 0;
         width: 100%;
         background: black;
@@ -509,6 +509,45 @@ body:not(.user-is-tabbing) a:focus {
         margin: 5px 0;
         background: #ff3258;
         transition: 0.3s;
+    }
+
+    .dropdown {
+        position: relative; /* Stellt sicher, dass das Menü relativ zum Parent bleibt */
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: fixed; /* ⚠️ FIX: Setzt das Menü über alle anderen Inhalte */
+        top: 40px; /* Stellt sicher, dass es direkt unter der Navbar beginnt */
+        left: 0;
+        width: 100%;
+        background: black;
+        list-style: none;
+        padding: 0px 0;
+        border-radius: 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 1000; /* Stellt sicher, dass es über allem liegt */
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown-menu.active { 
+        display: block;
+    }
+
+    .dropdown-menu li {
+        padding: 12px;
+    }
+
+    .dropdown-menu li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 12px;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #ff3258;
     }
 }
 

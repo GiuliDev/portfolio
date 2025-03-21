@@ -339,8 +339,9 @@ body:not(.user-is-tabbing) a:focus {
 .menu-toggle { /* 🆕 NEU HINZUGEFÜGT */
     display: none;
     flex-direction: column;
+    margin-right: auto;
     cursor: pointer;
-    margin-right: 1.5em;
+    margin-left: 2em;
     transition: transform 0.3s ease-in-out;
 }
 

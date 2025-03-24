@@ -729,7 +729,13 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__image-box {
     margin-bottom: var(--gutter-normal);
+    
 }
+
+.work__image-box:hover {
+    transform: scale(1.03);
+}
+
 
 @media(min-width: 901px) {
     .work__image-box {

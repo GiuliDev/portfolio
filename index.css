@@ -780,6 +780,11 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- About ----- */
 /* --------------------------------------- */
 
+.about__photo {
+    border-radius: 50%;
+    width: 350px;
+}
+
 .about__content {
     display: flex;
     flex-direction: row-reverse;

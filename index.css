@@ -716,6 +716,7 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: var(--gutter-normal);
 }
 
+
 .work__code {
     display: block;
     height: 3rem;
@@ -820,6 +821,38 @@ body:not(.user-is-tabbing) a:focus {
 .contact__info {
     max-width: var(--container-medium-width);
 }
+
+
+/* --------------------------------------- */
+/* ----- Certificat ----- */
+/* --------------------------------------- */
+
+.pdf-links {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.title-zertifikat{
+    display: flex;
+    justify-content: center;
+}
+
+
+.download-newTab-BTN {
+    list-style-position: inside;
+    margin-top: 2em;
+    margin-bottom: var(--gutter-normal);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
 
 /* --------------------------------------- */
 /* ----- Footer ----- */

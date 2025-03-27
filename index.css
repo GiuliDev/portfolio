@@ -786,6 +786,12 @@ body:not(.user-is-tabbing) a:focus {
     width: 350px;
 }
 
+@media(max-width: 420px) {
+    .about__photo {
+        width: 200px;
+    }
+}
+
 .about__content {
     display: flex;
     flex-direction: row-reverse;
@@ -801,12 +807,15 @@ body:not(.user-is-tabbing) a:focus {
 
 .about__photo-container {
     margin-bottom: var(--gutter-normal);
+    display: flex;
+    justify-content: center;
 }
 
 @media(min-width: 901px) {
     .about__text {
         flex: 0 0 35%;
     }
+    
     
     .about__photo-container {
         flex: 1;

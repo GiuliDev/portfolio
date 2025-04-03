@@ -466,6 +466,21 @@ body:not(.user-is-tabbing) a:focus {
     margin-right: 0;
 }
 
+.language img {
+       width: 20px; 
+       display: flex;
+       transition: transform 0.4s ease;
+}
+
+.language img:hover {
+    transform: rotate(360deg)
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+
 
 /* RESPONSIVE DESIGN für kleine Bildschirme */
 @media screen and (max-width: 768px) {
@@ -555,6 +570,10 @@ body:not(.user-is-tabbing) a:focus {
     .dropdown-menu li a:hover {
         color: gold;
 
+    }
+
+    .language img {
+        margin: 0 auto
     }
 
     

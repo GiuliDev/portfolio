@@ -297,6 +297,45 @@ body:not(.user-is-tabbing) a:focus {
     font-family: sans-serif;
 }
 
+/* ----- SKILLS ----- */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    padding: 2em;
+}
+.skills div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skills li {
+    list-style: none;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+
+}
+.skills li img {
+    list-style: none;
+}
+
+.skills h3 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+.skills h4 {
+    display: block;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
+
 /* ----- Back to Top ----- */
 
 .back-to-top {

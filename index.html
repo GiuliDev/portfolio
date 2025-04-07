@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon-32x32.png" />
 
-  <!-- Put your site title here -->
+  
   <title>
     Giuliano Costin | Frontend-Entwickler aus Essen, Deutschland
   </title>
 
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <meta name="author" content="Giuliano Costin">
+  <meta name="description" content="Giuliano Costin – Frontend Developer mit Erfahrung in React, JavaScript, HTML, CSS, Firebase und mehr.">
+  <meta name="keywords" content="Giuliano Costin, portfolio, React, JavaScript, CSS, HTML, GitHub, Firebase, Bootstrap, Customer Service">
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -28,7 +28,7 @@
       <nav class="nav sticky-nav" id="navbar" role="navigation">
 
 
-        <div class="menu-toggle" id="mobile-menu"> <!-- 🆕 NEU HINZUGEFÜGT -->
+        <div class="menu-toggle" id="mobile-menu"> <!-- 🆕 toggle Menü -->
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -56,9 +56,15 @@
         </div>
 
         <ul class="nav__items">
+
           <li class="nav__item">
             <a href="#top" class="nav__link">Start</a>
           </li>
+
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+
           <li class="nav__item dropdown">
             <a href="#projects" class="nav__link">Projekte</a>
             <ul class="dropdown-menu">
@@ -66,13 +72,18 @@
               <li><a href="#javascript-projects" class="nav__link">JavaScript</a></li>
             </ul>
           </li>
+
           <!-- <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li> -->
-          <li class="nav__item">
-            <a href="#about" class="nav__link no-wrap">Über mich</a>
+          
+          <li class="nav__item dropdown">
+            <a href="#about" class="nav__link no-wrap">Profil</a>
+            <ul class="dropdown-menu">
+              <li><a href="#about" class="nav__link">Über mich</a></li>
+              <li><a href="#certificat" class="nav__link">Zertifikate</a></li>
+              <li><a href="#lebenslauf" class="nav__link">Lebenslauf</a></li>
+            </ul>
           </li>
-          <li class="nav__item">
-            <a href="#certificat" class="nav__link no-wrap">Zertifikate / Lebenslauf</a>
-          </li>
+
           <li class="nav__item">
             <a href="#contact" class="nav__link">Kontakt</a>
           </li>
@@ -80,6 +91,7 @@
             <a href="index-english.html" class="language"><img src="images/united-states-flag-icon.png" alt="U.S.A Flagge"></a>
           </li>
         </ul>
+        
       </nav>
 
     </div>
@@ -93,7 +105,7 @@
         <!-- Put a small paragraph about yourself -->
         <span class="beschreibung-kurz"><p>Ein Frontend <span class="title-developer-span">Entwickler</span> aus Essen, Deutschland
 </p></span>
-        <a href="#contact" class="btn btn--pink">Melde dich gern</a>
+        <a href="#contact" class="btn btn--pink">Schreib mir einfach</a>
         
       </div>
     </div>
@@ -336,7 +348,7 @@
 
         <div class="work__box">
           <div class="work__text">
-            <h3>Tenzies Game</h3>
+            <h3>Tenzies Spiel</h3>
             <p>
               Responsives Frontend-Spiel im Mobile-First-Design, bei dem alle Würfel durch gezieltes „Einfrieren“ auf denselben Wert gebracht werden müssen – inklusive Sieg-Animation und Neustartfunktion.
             </p>
@@ -522,7 +534,7 @@
           
           <div class="work__box">
             <div class="work__text">
-              <h3>Password-Generator</h3>
+              <h3>Passwort-Generator</h3>
               <p>
                 Eine Web-App, die sichere, zufällige Passwörter generiert und per Klick in die Zwischenablage kopiert.
               </p>
@@ -550,7 +562,7 @@
 
           <div class="work__box">
             <div class="work__text">
-              <h3>🎨 Color Scheme Generator</h3>
+              <h3>🎨 Farbkombinations-Generator </h3>
               <p>
                 Responsives Frontend-Tool im zur Generierung von Farbschemata – Nutzer wählen eine Basisfarbe (z. B. #1CEA98) und einen Stil (z. B. „Analogic“), woraufhin passende Farben mit HEX-Codes angezeigt werden.
               </p>
@@ -607,7 +619,7 @@
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Unit-Converter</h3>
+              <h3>Einheiten-Umrechner</h3>
               <p>
                 Diese moderne und responsive Umrechnungsseite ermöglicht die einfache Konvertierung metrischer und imperialer Einheiten (Länge, Volumen, Masse) auf Basis eines eingegebenen Wertes.
               </p>
@@ -669,7 +681,7 @@
 
     <section class="about" id="about">
       <div class="row">
-        <h2>About Me</h2>
+        <h2>Über mich</h2>
         <div class="about__content">
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
@@ -778,7 +790,7 @@
 
 
 
-                <div class="work__box">
+                <div class="work__box" id="lebenslauf">
                   <div class="work__text">
                     <h3>Lebenslauf / CV</h3>
                     <p>
@@ -810,7 +822,7 @@
 
   <section class="contact" id="contact">
     <div class="row">
-      <h2>Get in Touch</h2>
+      <h2>Lass von dir hören</h2>
       <div class="contact__info">
         <p>
           Du suchst einen motivierten und zuverlässigen Frontend Developer, der deine Website modern, benutzerfreundlich und responsiv umsetzt?

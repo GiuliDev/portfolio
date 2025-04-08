@@ -679,6 +679,7 @@ body:not(.user-is-tabbing) a:focus {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     font-size: var(--font-size-normal);
 }
 

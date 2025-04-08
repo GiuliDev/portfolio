@@ -684,9 +684,12 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 @media (max-width: 768px) {
-    header {
-      background-position: top;
-      background-size: cover;
+    .header {
+        background: url("./heroBildResponsiv.jpg");
+        background-color: #111; 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
     }
   }
 

@@ -533,7 +533,7 @@ body:not(.user-is-tabbing) a:focus {
         display: flex; /* Richtet die Icons in einer Linie aus */
         gap: 10px; /* Fügt Abstand zwischen den Icons hinzu */
         align-items: center;
-        margin-right: 3em;
+        margin-right: 2em;
     }
 
     .marginlanguage {

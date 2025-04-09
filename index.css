@@ -987,3 +987,23 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+.language-desktop {
+    display: inline-block;
+  }
+  .language-mobile {
+    display: none;
+  }
+  
+  /* Für kleinere Bildschirme (Mobil): */
+  @media (max-width: 768px) {
+    .language-desktop {
+      display: none;
+    }
+    .language-mobile {
+      display: inline-block;
+      margin-left: 5rem;
+    }
+  }
+
+
